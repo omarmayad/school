@@ -9,8 +9,8 @@
 </head>
 <body>
 <div class="jumbotron">
-  <div class="page-header">
-  <h1> {{Companies}} Positions : <span class="label"><strong>(27)</strong></span></h1>
+  <div class="page-header" [ngStyle]="{'background-color':currentColor}">
+  <h1> {{currentCompany}} Positions : <span class="label"><strong>(27)</strong></span></h1>
 </div>
 <div class="job-details row">
 	<div class="col-md-5 ">

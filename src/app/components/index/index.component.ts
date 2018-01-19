@@ -7,15 +7,28 @@ import 'rxjs/add/operator/filter';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
-  Companies = ['Walmart', 'USPS', 'Amazon' , 'Ups' , 'Randstand' , 'Home' , 'Hilton' , 'Fedex' , 'Amazon'];
-imgUrl = ['Webp.net-resizeimage%20(8).png'];
-
+  currentCompany:any = "";
+  imgUrl = ['Webp.net-resizeimage%20(8).png'];
+  currentColor ="#336"
   constructor(router:Router) {
     router.events.subscribe(event => {
-      if(event instanceof NavigationEnd)
-        console.log("event",event);
-        
+      if(event instanceof NavigationEnd){
+        switch(this.mapping(event.url)){
+          case "usps":
+            this.currentCompany = "USPS"
+            this.currentColor = "#336"
+            break;
+          case "amazon":
+            this.currentCompany = "Amazon"
+            this.currentColor = "#fe9d0b"            
+            break;
+        }
+      }
     });
+  }
+
+  mapping(name){
+    return name.slice(1,name.length);
   }
 
   ngOnInit() {
