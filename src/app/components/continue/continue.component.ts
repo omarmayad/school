@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./continue.component.css']
 })
 export class ContinueComponent implements OnInit {
-
+  Company;
   constructor() { }
 
   ngOnInit() {

@@ -234,7 +234,6 @@ body {
   .progress-bar {
     text-align: left;
     white-space: nowrap;
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     cursor: pointer; }
@@ -252,7 +251,9 @@ body {
     min-height: 40px;
     border-width: 0px;
     border-style: solid;
-    border-color: #a0a0a0; }
+    border-color: #a0a0a0; 
+    bottom: -10px;
+  }
   
   .progress-meter > .meter-left {
     border-left-width: 2px; }
@@ -267,7 +268,7 @@ body {
   .progress-meter > .meter > .meter-text {
     position: absolute;
     display: inline-block;
-    bottom: -20px;
+    bottom: 0px;
     width: 100%;
     font-weight: 700;
     font-size: 0.85em;
@@ -359,6 +360,6 @@ body {
 
 @media (min-width: 1200px) { 
     .jumbotron {
-        width:55%;
+        width:67%;
     }
      }
