@@ -10,7 +10,7 @@
 <body>
 <div class="jumbotron">
   <div class="page-header" [ngStyle]="{'background-color':currentColor}">
-  <h1> {{currentCompany}} Positions : <span class="label"><strong>(27)</strong></span></h1>
+  <h1> Open {{currentCompany}} Positions : <span class="label"><strong>(27)</strong></span></h1>
 </div>
 <div class="job-details row">
 	<div class="col-md-5 ">
@@ -21,9 +21,9 @@
 <div class="col-md-5 ">
    
     	<ul class="list-group">
-		  <li class="list-group-item"><i class="fa fa-check"></i> &#36;15 - &#36;36 per hour</li>
-		  <li class="list-group-item"><i class="fa fa-check"></i> Flexible hours</li>
-		  <li class="list-group-item"><i class="fa fa-check"></i> Quick interview</li>
+		  <li class="list-group-item"><i [ngStyle]="{'color':currentColor}" class="fa fa-check "></i> &#36;15 - &#36;36 per hour</li>
+		  <li class="list-group-item"><i [ngStyle]="{'color':currentColor}" class="fa fa-check"></i> Flexible hours</li>
+		  <li class="list-group-item"><i  [ngStyle]="{'color':currentColor}" class="fa fa-check"></i> Quick interview</li>
  		</ul>
 </div>
 </div>
@@ -34,7 +34,7 @@
 </div>
     <div class="col-md-6 jobutton">
  
-			    <button type="button" class="btn btn-success btn-lg btn-block"><!--<i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i> --> <strong>View {{Companies}} jobs</strong> <!--<i class="fa fa-arrow-left fa-lg" aria-hidden="true"></i> --></button>
+			    <button type="button" class="btn btn-success btn-lg btn-block"><!--<i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i> --> <strong>View {{currentCompany}} jobs</strong> <!--<i class="fa fa-arrow-left fa-lg" aria-hidden="true"></i> --></button>
 			 
 			    <button type="button" class="btn btn-danger btn-lg btn-block"><strong>Immediate hire jobs</strong> <span class="label"> (79) </span> </button>
 			
@@ -62,7 +62,7 @@
 						<div class="avatar " style="background-image: url('https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg')"></div>
 				</div>
 				<div class="comment-block">
-						<p class="comment-text">Applytojobs.org has gotten me 6 interviews thus far. One with {{Companies}} and 5 more with great companies that are minutes away from where I live.</p>
+						<p class="comment-text">Applytojobs.org has gotten me 6 interviews thus far. One with {{currentCompany}} and 5 more with great companies that are minutes away from where I live.</p>
 						<div class="bottom-comment">
 								
 									<ul class="comment-actions">
@@ -80,7 +80,7 @@
 						<div class="avatar" style="background-image: url('https://s3.amazonaws.com/uifaces/faces/twitter/felipenogs/128.jpg')"></div>
 				</div>
 				<div class="comment-block">
-						<p class="comment-text">It took me less than a minute to actually get matched with a job that interviewed me &amp; extended me an offer. It wasn’t {{Companies}} but it was still an awesome paying job!.</p>
+						<p class="comment-text">It took me less than a minute to actually get matched with a job that interviewed me &amp; extended me an offer. It wasn’t {{currentCompany}} but it was still an awesome paying job!.</p>
 						<div class="bottom-comment">
 									<ul class="comment-actions">
                                         <a href="https://www.fb.com" target="_blank"><li class="reply"> Reply <span>-</span></li></a>

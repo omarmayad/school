@@ -233,7 +233,7 @@ body {
     margin-bottom: 0; }
   
   .progress-bar {
-    text-align: left;
+   
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -364,3 +364,10 @@ body {
         width:67%;
     }
      }
+
+     @media (min-width: 1600px) { 
+      .jumbotron {
+          width:50%;
+      }
+       }
+  
