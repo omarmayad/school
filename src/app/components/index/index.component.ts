@@ -7,11 +7,13 @@ import 'rxjs/add/operator/filter';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
-Companys = ['Walmart', 'USPS', 'Amazon' , 'Ups' , 'Randstand' , 'Home' , 'Hilton' , 'Fedex' , 'Amazon'];
+  Companies = ['Walmart', 'USPS', 'Amazon' , 'Ups' , 'Randstand' , 'Home' , 'Hilton' , 'Fedex' , 'Amazon'];
+imgUrl = ['Webp.net-resizeimage%20(8).png'];
 
   constructor(router:Router) {
     router.events.subscribe(event => {
       if(event instanceof NavigationEnd)
+        console.log("event",event);
         
     });
   }
