@@ -12,22 +12,21 @@ export class QuestionsComponent implements OnInit {
   index = 0;
   currentQuestion=this.questionsList[this.index]; 
   AllTheSelectedOptions=[] ;
+  percentage=16.66666666666667;
   constructor(){}
   ngOnInit() {
   }
 
   receiveEvent($event){
-    console.log($event)
     this.index++;
+    this.percentage += 100/this.questionsList.length
     this.currentQuestion=this.questionsList[this.index];
-
-    if(this.currentQuestion.indexOf(this.AllTheSelectedOptions)<0){
-      this.currentQuestion.push(this.AllTheSelectedOptions);
+    console.log(this.percentage)
+    this.AllTheSelectedOptions.push($event);
+    if(this.index == 5){
+      //go to final page
+      localStorage.setItem('options', JSON.stringify(this.AllTheSelectedOptions));
     }
-    else{
-      this.currentQuestion.splice(this.currentQuestion.indexOf(this.AllTheSelectedOptions),1);
-    }
-    
   }
 
 }

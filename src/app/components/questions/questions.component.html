@@ -27,25 +27,14 @@
 <app-sixth-question *ngIf="currentQuestion=='SixthQuestion'" (messageEvent)="receiveEvent($event)"></app-sixth-question>
 
 
-  <div class="container">
-	
-    <div class="row">
-		<div class="col-sm-offset-1 col-sm-10">
+  <div class="container col-sm-10 col-sm-push-2">
+
 			<div class="progress ">
-				<div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 25%">
+				<div class="progress-bar bg-success progress-bar-striped progress-bar-animated" [ngStyle]="{'width':percentage+'%'}">
 				    <span class="sr-only">35% Complete (success)</span>
 				  </div>
-				  <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 25%">
-				    <span class="sr-only">20% Complete (success)</span>
-				  </div>
-				  <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 25%">
-				    <span class="sr-only">10% Complete (success)</span>
-				  </div>
-				  <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 25%">
-				    <span class="sr-only">10% Complete (success)</span>
-				  </div>
+				 
 			</div>
-			
 			<div class="progress-meter">
 				<div class="meter meter-left" style="width: 25%;"><span class="meter-text">Qualify</span></div>
 				<div class="meter meter-left" style="width: 25%;"><span class="meter-text">Profile</span></div>
@@ -53,9 +42,9 @@
 				<div class="meter meter-right" style="width: 25%;"><span class="meter-text">Positions</span></div>
 			</div>
 		</div>
-	</div>
+	
 </div>
-    </div>
+	
     
   
 </body>

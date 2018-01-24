@@ -21,7 +21,7 @@ export class SecondQuestionComponent implements OnInit {
     else{
       this.Options.splice(this.Options.indexOf(selected),1);
     }
-    console.log(this.Options);
+    
 
   }
 
