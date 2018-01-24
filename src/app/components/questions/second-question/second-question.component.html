@@ -5,25 +5,28 @@
 <div class="card col-md-12">
   <div class="card-block">
       
-   <button type="button" class="btn btn-success btn-lg">Delivery Driver</button>
+   <button type="button" class="btn btn-success btn-lg" (click)="addOption('Delivery Driver')">Delivery Driver</button>
 
-  <button type="button" class="btn btn-success btn-lg">Cashier</button>
+  <button type="button" class="btn btn-success btn-lg" (click)="addOption('Cashier')">Cashier</button>
 
-   <button type="button" class="btn btn-success btn-lg">Stocker</button>
+   <button type="button" class="btn btn-success btn-lg" (click)="addOption('Stocker')">Stocker</button>
       
-      <button type="button" class="btn btn-success btn-lg">Sales</button>
+      <button type="button" class="btn btn-success btn-lg" (click)="addOption('Sales')">Sales</button>
       
-      <button type="button" class="btn btn-success btn-lg">Customer Service</button>
+      <button type="button" class="btn btn-success btn-lg" (click)="addOption('Customer Service')">Customer Service</button>
       
-      <button type="button" class="btn btn-success btn-lg">Clerical or Admin</button>
+      <button type="button" class="btn btn-success btn-lg" (click)="addOption('Clerical or Admin')">Clerical or Admin</button>
       
-      <button type="button" class="btn btn-success btn-lg"> Package Handler</button>
+      <button type="button" class="btn btn-success btn-lg" (click)="addOption('Package Handler')">Package Handler</button>
       
-      <button type="button" class="btn btn-success btn-lg"> IT</button>
+      <button type="button" class="btn btn-success btn-lg" (click)="addOption('IT')">IT</button>
       
-      <button type="button" class="btn btn-success btn-lg"> Accounting</button>
+      <button type="button" class="btn btn-success btn-lg" (click)="addOption('Accounting')">Accounting</button>
       
-      <button type="button" class="btn btn-success btn-lg">Other</button>
+      <button type="button" class="btn btn-success btn-lg" (click)="addOption('Other')">Other</button>
+
+      <button type="button" class="btn btn-warning btn-lg" (click)="nextQuestion($event)">Next</button>
   </div>
 </div>
 </div>
+<span *ngFor="let option of Options">{{option}}</span>

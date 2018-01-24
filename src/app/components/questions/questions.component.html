@@ -20,11 +20,11 @@
     
 
 <app-first-question *ngIf="currentQuestion=='FirstQuestion'" (messageEvent)="receiveEvent($event)"></app-first-question>
-<app-second-question *ngIf="currentQuestion=='SecondQuestion'"></app-second-question>
-<app-third-question *ngIf="currentQuestion=='ThirdQuestion'"></app-third-question>
-<app-forth-question *ngIf="currentQuestion=='ForthQuestion'"></app-forth-question>
-<app-fifth-question *ngIf="currentQuestion=='FifthQuestion'"></app-fifth-question>
-<app-sixth-question *ngIf="currentQuestion=='SixthQuestion'"></app-sixth-question>
+<app-second-question *ngIf="currentQuestion=='SecondQuestion'" (messageEvent)="receiveEvent($event)"></app-second-question>
+<app-third-question *ngIf="currentQuestion=='ThirdQuestion'" (messageEvent)="receiveEvent($event)"></app-third-question>
+<app-forth-question *ngIf="currentQuestion=='ForthQuestion'" (messageEvent)="receiveEvent($event)"></app-forth-question>
+<app-fifth-question *ngIf="currentQuestion=='FifthQuestion'" (messageEvent)="receiveEvent($event)"></app-fifth-question>
+<app-sixth-question *ngIf="currentQuestion=='SixthQuestion'" (messageEvent)="receiveEvent($event)"></app-sixth-question>
 
 
   <div class="container">
