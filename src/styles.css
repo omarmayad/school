@@ -308,6 +308,9 @@ body {
   .btn-success{
       background-color: #7DD600;
   }
+  .OptionBtn{
+    margin: 5px 20px;
+  }
   @-webkit-keyframes bounce {
       0% { top: 0; }
       50% { top: -0.2em; }

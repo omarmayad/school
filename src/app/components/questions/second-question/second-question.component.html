@@ -29,4 +29,6 @@
   </div>
 </div>
 </div>
-<span *ngFor="let option of Options">{{option}}</span>
+<div class="selected-options">
+  <button type="button" *ngFor="let option of Options" class="btn btn-primary btn-md OptionBtn disabled">{{option}}</button>  
+</div>
