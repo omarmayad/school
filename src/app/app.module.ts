@@ -5,6 +5,12 @@ import { AppComponent } from './app.component';
 import { ContinueComponent } from './components/continue/continue.component';
 import { IndexComponent } from './components/index/index.component';
 import { QuestionsComponent } from './components/questions/questions.component';
+import { FirstQuestionComponent } from './components/questions/first-question/first-question.component';
+import { SecondQuestionComponent } from './components/questions/second-question/second-question.component';
+import { ThirdQuestionComponent } from './components/questions/third-question/third-question.component';
+import { ForthQuestionComponent } from './components/questions/forth-question/forth-question.component';
+import { FifthQuestionComponent } from './components/questions/fifth-question/fifth-question.component';
+import { SixthQuestionComponent } from './components/questions/sixth-question/sixth-question.component';
 
 const appRoutes: Routes = [
   { path: 'continue', component: ContinueComponent },
@@ -17,7 +23,13 @@ const appRoutes: Routes = [
     AppComponent,
     ContinueComponent,
     IndexComponent,
-    QuestionsComponent
+    QuestionsComponent,
+    FirstQuestionComponent,
+    SecondQuestionComponent,
+    ThirdQuestionComponent,
+    ForthQuestionComponent,
+    FifthQuestionComponent,
+    SixthQuestionComponent
   ],
   imports: [
     BrowserModule,
