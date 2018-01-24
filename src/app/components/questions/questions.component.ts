@@ -8,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuestionsComponent implements OnInit {
   questionsList:any=["FirstQuestion","SecondQuestion","ThirdQuestion",
-  "ForthQuestion","FixfthQuestion","SixthQuestion"];
+  "ForthQuestion","FifthQuestion","SixthQuestion"];
   index = 0;
-  currentQuestion=this.questionsList[this.index];  
+  currentQuestion=this.questionsList[this.index]; 
+  AllTheSelectedOptions=[] ;
   constructor(){}
   ngOnInit() {
   }
@@ -18,7 +19,15 @@ export class QuestionsComponent implements OnInit {
   receiveEvent($event){
     console.log($event)
     this.index++;
-    this.currentQuestion=this.questionsList[this.index];  
+    this.currentQuestion=this.questionsList[this.index];
+
+    if(this.currentQuestion.indexOf(this.AllTheSelectedOptions)<0){
+      this.currentQuestion.push(this.AllTheSelectedOptions);
+    }
+    else{
+      this.currentQuestion.splice(this.currentQuestion.indexOf(this.AllTheSelectedOptions),1);
+    }
+    
   }
 
 }

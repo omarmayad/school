@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 import { Output } from '@angular/core';
 @Component({
   selector: 'app-fifth-question',
@@ -6,10 +6,12 @@ import { Output } from '@angular/core';
   styleUrls: ['./fifth-question.component.css']
 })
 export class FifthQuestionComponent implements OnInit {
-
+  @Output() messageEvent = new EventEmitter<any>();
   constructor() { }
 
   ngOnInit() {
   }
-
+  nextQuestion(selected){
+    this.messageEvent.emit({question:"FifthQuestion",selected:selected});
+  }
 }
