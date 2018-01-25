@@ -12,18 +12,18 @@ export class QuestionsComponent implements OnInit {
   index = 0;
   currentQuestion=this.questionsList[this.index]; 
   AllTheSelectedOptions=[] ;
-  percentage=16.66666666666667;
+  percentage=0;
   constructor(private router :Router){}
   ngOnInit() {
   }
 
   receiveEvent($event){
     this.index++;
-    this.percentage += 100/this.questionsList.length
+    this.percentage += (100/this.questionsList.length)/4;
     this.currentQuestion=this.questionsList[this.index];
     console.log(this.percentage)
     this.AllTheSelectedOptions.push($event);
-    if(this.index == 5){
+    if(this.index == 6){
       //go to final page
       localStorage.setItem('options', JSON.stringify(this.AllTheSelectedOptions));
       this.router.navigateByUrl('/continue');
