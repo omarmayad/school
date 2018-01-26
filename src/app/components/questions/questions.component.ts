@@ -13,14 +13,19 @@ export class QuestionsComponent implements OnInit {
   currentQuestion=this.questionsList[this.index]; 
   AllTheSelectedOptions=[] ;
   percentage=0;
-  constructor(private router :Router){}
+  currentColor ="#303066";
+  constructor(private router :Router){
+    this.currentColor= localStorage.getItem('Color');
+  }
   ngOnInit() {
   }
 
   receiveEvent($event){
+    
     this.index++;
     this.percentage += (100/this.questionsList.length)/4;
     this.currentQuestion=this.questionsList[this.index];
+
     console.log(this.percentage)
     this.AllTheSelectedOptions.push($event);
     if(this.index == 6){

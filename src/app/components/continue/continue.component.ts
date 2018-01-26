@@ -7,7 +7,10 @@ import { NavigationEnd, Router } from '@angular/router';
   styleUrls: ['./continue.component.css']
 })
 export class ContinueComponent implements OnInit {
-  
+  currentColor="";
+  constructor(){
+    this.currentColor= localStorage.getItem('Color');
+  }
   ngOnInit() {
   }
 

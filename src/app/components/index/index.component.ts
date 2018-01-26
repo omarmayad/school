@@ -1,3 +1,4 @@
+import { FirstQuestionComponent } from './../questions/first-question/first-question.component';
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import 'rxjs/add/operator/filter';
@@ -7,10 +8,10 @@ import 'rxjs/add/operator/filter';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
-  [x: string]: any;
+  
   currentCompany:any = "";
   imgUrl = "";
-  currentColor ="#303066"
+  currentColor ="#303066";
   constructor(private router :Router) {
     router.events.subscribe(event => {
       if(event instanceof NavigationEnd){
@@ -76,6 +77,8 @@ export class IndexComponent implements OnInit {
   ngOnInit() {
   }
 goToQuestions(){
+  localStorage.setItem('Color',this.currentColor);
   this.router.navigateByUrl('/questions');
+  
 }
 }
