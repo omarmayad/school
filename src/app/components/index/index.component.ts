@@ -7,10 +7,11 @@ import 'rxjs/add/operator/filter';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
+  [x: string]: any;
   currentCompany:any = "";
   imgUrl = "";
   currentColor ="#303066"
-  constructor(router:Router) {
+  constructor(private router :Router) {
     router.events.subscribe(event => {
       if(event instanceof NavigationEnd){
         switch(this.mapping(event.url)){
@@ -74,5 +75,7 @@ export class IndexComponent implements OnInit {
 
   ngOnInit() {
   }
-
+goToQuestions(){
+  this.router.navigateByUrl('/questions');
+}
 }

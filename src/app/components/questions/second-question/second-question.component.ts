@@ -17,6 +17,7 @@ export class SecondQuestionComponent implements OnInit {
       this.messageEvent.emit({question:"SecondQuestion",selected:this.Options});
     }
     else{
+      
       alert("You must select at least one option");
     }
    

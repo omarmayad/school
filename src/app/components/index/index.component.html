@@ -34,9 +34,9 @@
 </div>
     <div class="col-md-6 jobutton">
  
-			    <button type="button" class="btn btn-success btn-lg btn-block"><!--<i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i> --> <strong>View {{currentCompany}} jobs</strong> <!--<i class="fa fa-arrow-left fa-lg" aria-hidden="true"></i> --></button>
+			    <button type="button" class="btn btn-success btn-lg btn-block" (click)="goToQuestions()"><strong>View {{currentCompany}} jobs</strong> </button>
 			 
-			    <button type="button" class="btn btn-danger btn-lg btn-block"><strong>Immediate hire jobs</strong> <span class="label"> (79) </span> </button>
+			    <button type="button" class="btn btn-danger btn-lg btn-block" (click)="goToQuestions()"><strong>Immediate hire jobs</strong> <span class="label"> (79) </span> </button>
 			
 			
 		
