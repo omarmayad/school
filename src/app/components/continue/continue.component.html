@@ -20,27 +20,35 @@
 
 <div class="questions-block">
 	<div class="page-header">
-  <h3>These are the input fields</h3>
+  <h3>Employers want to know ...</h3>
 </div>
 <div class="card  col-md-12">
   <div class="card-block">
+      <app-zip-code *ngIf="currentInput=='FirstInput'" (messageEvent)="receiveEvent($event)"></app-zip-code>
+      <app-birth *ngIf="currentInput=='SecondInput'" (messageEvent)="receiveEvent($event)"></app-birth>
+      <app-phone *ngIf="currentInput=='ThirdInput'" (messageEvent)="receiveEvent($event)"></app-phone>
+      <app-name *ngIf="currentInput=='ForthInput'" (messageEvent)="receiveEvent($event)"></app-name>
+      <app-email *ngIf="currentInput=='FifthInput'" (messageEvent)="receiveEvent($event)"></app-email>
+      
    
-      <input type="text" placeholder="Zip code here"> 
 
-      <button type="button" class="btn btn-success btn-lg btn-block">Continue >></button>
+      
    
   </div>
 </div>
 </div>
 <div class="container col-sm-10 col-sm-push-2">
 
-  <div class="progress ">
-    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 25%">
-        <span class="sr-only">35% Complete (success)</span>
-      </div>
-      
-     
-  </div>
+    <div class="progress ">
+        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" [ngStyle]="{'width':25+'%'}">
+            <span class="sr-only">35% Complete (success)</span>
+          </div>
+          <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" [ngStyle]="{'width':percentage+'%'}">
+            <span class="sr-only">{{percentage}}% Complete (success)</span>
+          </div>
+          
+          </div>
+         
   <div class="progress-meter">
     <div class="meter meter-left" style="width: 25%;"><span class="meter-text">Qualify</span></div>
     <div class="meter meter-left" style="width: 25%;"><span class="meter-text">Profile</span></div>
