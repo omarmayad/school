@@ -12,27 +12,35 @@
 	<div class="page-header" [ngStyle]="{'background-color':currentColor}"> 
   <h1> Open {{currentCompany}} Positions : <span class="label"><strong>(27)</strong></span></h1>
 </div>
-<div class="job-details row">
-	<div class="col-md-5 ">
+<div class="job-details  row justify-content-md-center">
+	<div class="col-md-5 col-sm-6">
   <a href="#" class="img-fluid">
       <img src="assets/images/{{imgUrl}}" alt="...">
     </a>
 </div>
-<div class="col-md-5 ">
+<div class="col-md-5 desktop" >
    
-    	<ul class="list-group">
+    	<ul class="list-group ">
 		  <li class="list-group-item"><i [ngStyle]="{'color':currentColor}" class="fa fa-check "></i> &#36;15 - &#36;36 per hour</li>
 		  <li class="list-group-item"><i [ngStyle]="{'color':currentColor}" class="fa fa-check"></i> Flexible hours</li>
 		  <li class="list-group-item"><i  [ngStyle]="{'color':currentColor}" class="fa fa-check"></i> Quick interview</li>
  		</ul>
 </div>
+<div class=" col-md-6 mobile">
+	<br>
+	<h1><strong>${{currentDollar}}/Hour {{currentCompany}} Jobs</strong></h1>
+	<br>
+	<br>
 </div>
-<div class="row">
+</div>
+<div class="row justify-content-md-center">
 	<div class="col-md-3 arrow">
+		
 		<i class="fa fa-caret-down bounce " aria-hidden="true"></i>
 </div>
 </div>
-    <div class="col-md-6 jobutton">
+<div class="row justify-content-md-center">
+    <div class="col-md-6 ">
  
 			    <button type="button" class="btn btn-success btn-lg btn-block" (click)="goToQuestions()"><strong>View {{currentCompany}} jobs</strong> </button>
 			 
@@ -41,7 +49,8 @@
 			
 		
     	
-    </div>
+	</div>
+</div>
 
     <div class="col-md-12">
     	<div class="comments">

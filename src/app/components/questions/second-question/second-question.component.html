@@ -2,7 +2,8 @@
 	<div class="page-header">
   <h3>Please select the position you would like to apply for&#63; </h3>
 </div>
-<div class="card col-md-12">
+
+  <div class=" card col col-md-12">
   <div class="card-block">
       
    <button type="button" class="btn btn-success btn-lg" (click)="addOption('Delivery Driver')">Delivery Driver</button>
@@ -29,6 +30,7 @@
   </div>
 </div>
 </div>
+
 <div class="selected-options">
   <button type="button" *ngFor="let option of Options" class="btn btn-primary btn-md OptionBtn disabled">{{option}}</button>  
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { empty } from 'rxjs/Observer';
 
 @Component({
   selector: 'app-birth',
@@ -8,21 +9,47 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class BirthComponent implements OnInit {
 
   @Output() messageEvent = new EventEmitter<any>();
+  Options=[];
+  months=["Month"];
+  years=["Year"];
+  days=["Day"];
   constructor() { }
 
   ngOnInit() {
   }
+  
+  
   nextInput(){
-    var birth = (<HTMLInputElement>document.getElementById('birth')).value;
-    this.newMethod(birth);
+    if( this.Options.length > 2){
+      this.messageEvent.emit({Input:"DateOfBirth",selectedDate:this.Options});
+    }
+    else{
+      
+      alert("You must enter a date");
+    }
+   
+  }
+  addOption(selected){
+    if(this.Options.indexOf(selected)<0){
+      this.Options.push(selected);
+      this.months = this.Options[0];
+      this.days = this.Options[1];
+      this.years = this.Options[2];
+    }
+    else{
+      this.Options.splice(this.Options.indexOf(selected),1);
+      
+    }
+    
+
   }
 
-  private newMethod(birth: string) {
-    if(birth.length>1){
-    this.messageEvent.emit({ DateOfBirth: birth });
+ /* private addOption(month,day,year) {
+    if(month.length && day.length && year.length>1){
+    this.messageEvent.emit({ selectedMonth: month , selectedDay : day ,selectedYear: year  });
     }
     else{
       alert("Please enter a date");
     }
-  }
+  }*/
 }

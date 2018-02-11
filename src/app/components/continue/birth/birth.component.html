@@ -1,2 +1,162 @@
-<input type="date" id="birth" placeholder="Date of Birth here"> 
+<!--<input type="date" id="birth" placeholder="Date of Birth here"> -->
+<div class="container">
+        <h6>Date of Birth:</h6>
+<div class="row justify-content-md-center">
+        
+<div class="btn-group dropdown col-3  div-inline">
+    
+        <button type="button" class="btn btn-sm btn-secondary">{{months}}</button>
+    <button class="btn btn-success dropdown-toggle " type="button" id="month" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    </button>
+    
+      <div class="dropdown-menu scrollable-menu" aria-labelledby="month">
+        <button class="dropdown-item" type="button" (click)="addOption('January')">January</button>
+        <button class="dropdown-item" type="button" (click)="addOption('February')">February</button>
+        <button class="dropdown-item" type="button" (click)="addOption('March')">March</button>
+        <button class="dropdown-item" type="button" (click)="addOption('April')">April</button>
+        <button class="dropdown-item" type="button" (click)="addOption('May')">May</button>
+        <button class="dropdown-item" type="button" (click)="addOption('June')">June</button>
+        <button class="dropdown-item" type="button" (click)="addOption('July')">July</button>
+        <button class="dropdown-item" type="button" (click)="addOption('August')">August</button>
+        <button class="dropdown-item" type="button" (click)="addOption('September')">September</button>
+        <button class="dropdown-item" type="button" (click)="addOption('October')">October</button>
+        <button class="dropdown-item" type="button" (click)="addOption('November')">November</button>
+        <button class="dropdown-item" type="button" (click)="addOption('December')">December</button>
+      </div>
+      </div>
+      <div class="btn-group dropdown col-3 div-inline">
+            <button type="button" class="btn btn-sm btn-secondary">{{days}}</button>
+      <button class="btn btn-success dropdown-toggle" type="button" id="day" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      </button>
+      
+    <div class="dropdown-menu scrollable-menu" aria-labelledby="day">
+        <button class="dropdown-item" type="button" (click)="addOption('1')">1</button>
+        <button class="dropdown-item" type="button" (click)="addOption('2')">2</button>
+        <button class="dropdown-item" type="button" (click)="addOption('3')">3</button>
+        <button class="dropdown-item" type="button" (click)="addOption('4')">4</button>
+        <button class="dropdown-item" type="button" (click)="addOption('5')">5</button>
+        <button class="dropdown-item" type="button" (click)="addOption('6')">6</button>
+        <button class="dropdown-item" type="button" (click)="addOption('7')">7</button>
+        <button class="dropdown-item" type="button" (click)="addOption('8')">8</button>
+        <button class="dropdown-item" type="button" (click)="addOption('9')">9</button>
+        <button class="dropdown-item" type="button" (click)="addOption('10')">10</button>
+        <button class="dropdown-item" type="button" (click)="addOption('11')">11</button>
+        <button class="dropdown-item" type="button" (click)="addOption('12')">12</button>
+        <button class="dropdown-item" type="button" (click)="addOption('13')">13</button>
+        <button class="dropdown-item" type="button" (click)="addOption('14')">14</button>
+        <button class="dropdown-item" type="button" (click)="addOption('15')">15</button>
+        <button class="dropdown-item" type="button" (click)="addOption('16')">16</button>
+        <button class="dropdown-item" type="button" (click)="addOption('17')">17</button>
+        <button class="dropdown-item" type="button" (click)="addOption('18')">18</button>
+        <button class="dropdown-item" type="button" (click)="addOption('19')">19</button>
+        <button class="dropdown-item" type="button" (click)="addOption('20')">20</button>
+        <button class="dropdown-item" type="button" (click)="addOption('21')">21</button>
+        <button class="dropdown-item" type="button" (click)="addOption('22')">22</button>
+        <button class="dropdown-item" type="button" (click)="addOption('23')">23</button>
+        <button class="dropdown-item" type="button" (click)="addOption('24')">24</button>
+        <button class="dropdown-item" type="button" (click)="addOption('25')">25</button>
+        <button class="dropdown-item" type="button" (click)="addOption('26')">26</button>
+        <button class="dropdown-item" type="button" (click)="addOption('27')">27</button>
+        <button class="dropdown-item" type="button" (click)="addOption('28')">28</button>
+        <button class="dropdown-item" type="button" (click)="addOption('29')">29</button>
+        <button class="dropdown-item" type="button" (click)="addOption('30')">30</button>
+        <button class="dropdown-item" type="button" (click)="addOption('31')">31</button>
+        
+      </div>
+      </div>
+      <div class="btn-group  dropdown col-3 div-inline">
+            <button type="button"  class="btn btn-sm btn-secondary" >{{years}}</button>
+      <button class="btn btn-success dropdown-toggle" type="button" id="year" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      </button>
+      
+      <div class="dropdown-menu scrollable-menu" aria-labelledby="year" role="menu">
+        <button class="dropdown-item" type="button" (click)="addOption('2006')" >2006</button>
+        <button class="dropdown-item" type="button" (click)="addOption('2005')">2005</button>
+        <button class="dropdown-item" type="button" (click)="addOption('2004')">2004</button>
+        <button class="dropdown-item" type="button" (click)="addOption('2003')">2003</button>
+        <button class="dropdown-item" type="button" (click)="addOption('2002')">2002</button>
+        <button class="dropdown-item" type="button" (click)="addOption('2001')">2001</button>
+        <button class="dropdown-item" type="button" (click)="addOption('2000')">2000</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1999')">1999</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1998')">1998</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1997')">1997</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1996')">1996</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1995')">1995</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1994')">1994</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1993')">1993</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1992')">1992</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1991')">1991</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1990')">1990</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1989')">1989</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1988')">1988</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1987')">1987</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1986')">1986</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1985')">1985</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1984')">1984</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1983')">1983</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1982')">1982</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1981')">1981</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1980')">1980</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1979')">1979</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1978')">1978</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1977')">1977</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1976')">1976</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1975')">1975</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1974')">1974</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1973')">1973</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1972')">1972</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1971')">1971</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1970')">1970</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1969')">1969</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1968')">1968</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1967')">1967</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1966')">1966</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1965')">1965</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1964')">1964</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1963')">1963</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1962')">1962</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1961')">1961</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1960')">1960</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1959')">1959</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1958')">1958</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1957')">1957</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1956')">1956</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1955')">1955</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1954')">1954</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1953')">1953</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1952')">1952</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1951')">1951</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1950')">1950</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1949')">1949</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1948')">1948</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1947')">1947</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1946')">1946</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1945')">1945</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1944')">1944</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1943')">1943</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1942')">1942</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1941')">1941</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1940')">1940</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1939')">1939</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1938')">1938</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1937')">1937</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1936')">1936</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1935')">1935</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1934')">1934</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1933')">1933</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1932')">1932</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1931')">1931</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1930')">1930</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1929')">1929</button>
+        <button class="dropdown-item" type="button" (click)="addOption('1928')">1928</button>
+
+
+      </div>
+  </div>
+  
+</div>
+<!--<div class="selected-options ">
+  <button type="button"  *ngFor="let option of Options" class="btn btn-primary btn-sm OptionBtn disabled">{{option}}</button>
+</div>-->
+</div>
 <button type="button" class="btn btn-success btn-lg btn-block" (click)="nextInput()">Continue >></button>

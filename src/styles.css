@@ -48,7 +48,7 @@ body {
     margin-left: 25%;
   }
   .arrow{
-    margin-left: 45%;
+    margin-left: 15%;
   }
   .job-details {
     margin: 50px auto;
@@ -177,21 +177,30 @@ body {
     font-size: 1rem;
     color: #555f77; }
   
-  input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-    color: #ced2db;
-    font-size: 16px; }
+   ::-webkit-input-placeholder {
+      color: rgb(141, 136, 141);
+      font-weight: 1000;
+      font-size: 16px;
+   }
+   
+   :-moz-placeholder { /* Firefox 18- */
+      color: rgb(141, 136, 141);
+      font-weight: 1000;
+      font-size: 16px;
+   }
+   
+   ::-moz-placeholder {  /* Firefox 19+ */
+      color: rgb(141, 136, 141);
+      font-weight: 1000;
+      font-size: 16px;
+   }
+   
+   :-ms-input-placeholder {  
+      color: rgb(141, 136, 141);
+      font-weight: 1000;
+      font-size: 16px;
+   }
   
-  input::-moz-placeholder, textarea::-moz-placeholder {
-    color: #ced2db;
-    font-size: 16px; }
-  
-  input:-moz-placeholder, textarea:-moz-placeholder {
-    color: #ced2db;
-    font-size: 16px; }
-  
-  input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-    color: #ced2db;
-    font-size: 16px; }
   
   .questions-block {
     width: 60%;
@@ -373,4 +382,10 @@ body {
           width:50%;
       }
        }
+      
+       @media screen and (max-width: 700px) {
+        .jumbotron{
+          width: 100%;
+        }
+      }
   
