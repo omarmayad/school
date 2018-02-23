@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ContinueComponent } from './components/continue/continue.component';
-import { IndexComponent } from './components/index/index.component';
 import { QuestionsComponent } from './components/questions/questions.component';
 import { SeventhQuestionComponent } from './components/questions/seventh-question/seventh-question.component';
 import { FirstQuestionComponent } from './components/questions/first-question/first-question.component';
@@ -21,17 +20,17 @@ import { EmailComponent } from './components/continue/email/email.component';
 
 
 const appRoutes: Routes = [
-  { path: 'continue', component: ContinueComponent },
+  
   { path: 'questions', component: QuestionsComponent },
-  { path: '**', component: IndexComponent },
+  { path: 'continue', component: ContinueComponent },
+  { path: '**', component: QuestionsComponent },
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContinueComponent,
-    IndexComponent,
     QuestionsComponent,
+    ContinueComponent,
     SeventhQuestionComponent,
     FirstQuestionComponent,
     SecondQuestionComponent,
