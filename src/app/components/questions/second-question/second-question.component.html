@@ -1,36 +1,63 @@
 <div class="questions-block secondqqq">
 	<div class="page-header">
-  <h3>Please select the position you would like to apply for&#63; </h3>
+  <h3>What is your age&#63; </h3>
 </div>
 
-  <div class=" card col col-md-12">
+  <div class=" card col-md-12">
   <div class="card-block">
-      
-   <button type="button" class="btn btn-success btn-lg" (click)="addOption('Delivery Driver')">Delivery Driver</button>
+    <div class="btn-group dropdown offset-md-3 col-sm-12 col-md-6">
+      <button type="button"  class="btn btn-md btn-secondary" >{{date}}</button>
+<button class="btn btn-success dropdown-toggle" type="button" id="date" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+</button>
 
-  <button type="button" class="btn btn-success btn-lg" (click)="addOption('Cashier')">Cashier</button>
+<div class="dropdown-menu scrollable-menu" aria-labelledby="date" role="menu">
+  <button class="dropdown-item" type="button" (click)="nextQuestion('15 or under')" >15 or under</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('16')">16</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('17')">17</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('18')">18</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('19')">19</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('20')">20</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('21')">21</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('22')">22</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('23')">23</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('24')">24</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('25')">25</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('26')">26</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('27')">27</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('28')">28</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('29')">29</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('30')">30</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('31')">31</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('32')">32</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('33')">33</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('34')">34</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('35')">35</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('36')">36</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('37')">37</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('38')">38</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('39')">39</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('40')">40</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('41')">41</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('42')">42</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('43')">43</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('44')">44</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('45')">45</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('46')">46</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('47')">47</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('48')">48</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('49')">49</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('50')">50</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('51')">51</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('52')">52</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('53')">53</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('54')">54</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('55 or older')">55 or older</button>
 
-   <button type="button" class="btn btn-success btn-lg" (click)="addOption('Stocker')">Stocker</button>
-      
-      <button type="button" class="btn btn-success btn-lg" (click)="addOption('Sales')">Sales</button>
-      
-      <button type="button" class="btn btn-success btn-lg" (click)="addOption('Customer Service')">Customer Service</button>
-      
-      <button type="button" class="btn btn-success btn-lg" (click)="addOption('Clerical or Admin')">Clerical or Admin</button>
-      
-      <button type="button" class="btn btn-success btn-lg" (click)="addOption('Package Handler')">Package Handler</button>
-      
-      <button type="button" class="btn btn-success btn-lg" (click)="addOption('IT')">IT</button>
-      
-      <button type="button" class="btn btn-success btn-lg" (click)="addOption('Accounting')">Accounting</button>
-      
-      <button type="button" class="btn btn-success btn-lg" (click)="addOption('Other')">Other</button>
+</div>
+</div>
 
-      <button type="button" class="btn btn-warning btn-lg" (click)="nextQuestion()">Next</button>
+  
   </div>
 </div>
 </div>
 
-<div class="selected-options">
-  <button type="button" *ngFor="let option of Options" class="btn btn-primary btn-md OptionBtn disabled">{{option}}</button>  
-</div>

@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { ContinueComponent } from './components/continue/continue.component';
 import { IndexComponent } from './components/index/index.component';
 import { QuestionsComponent } from './components/questions/questions.component';
+import { SeventhQuestionComponent } from './components/questions/seventh-question/seventh-question.component';
 import { FirstQuestionComponent } from './components/questions/first-question/first-question.component';
 import { SecondQuestionComponent } from './components/questions/second-question/second-question.component';
 import { ThirdQuestionComponent } from './components/questions/third-question/third-question.component';
@@ -16,6 +17,7 @@ import { BirthComponent } from './components/continue/birth/birth.component';
 import { PhoneComponent } from './components/continue/phone/phone.component';
 import { NameComponent } from './components/continue/name/name.component';
 import { EmailComponent } from './components/continue/email/email.component';
+
 
 
 const appRoutes: Routes = [
@@ -30,6 +32,7 @@ const appRoutes: Routes = [
     ContinueComponent,
     IndexComponent,
     QuestionsComponent,
+    SeventhQuestionComponent,
     FirstQuestionComponent,
     SecondQuestionComponent,
     ThirdQuestionComponent,

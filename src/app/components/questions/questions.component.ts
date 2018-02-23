@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./questions.component.css']
 })
 export class QuestionsComponent implements OnInit {
-  questionsList:any=["FirstQuestion","SecondQuestion","ThirdQuestion",
+  questionsList:any=["SeventhQuestion","FirstQuestion","SecondQuestion","ThirdQuestion",
   "ForthQuestion","FifthQuestion","SixthQuestion"];
   index = 0;
   currentQuestion=this.questionsList[this.index]; 
@@ -28,7 +28,7 @@ export class QuestionsComponent implements OnInit {
 
     console.log(this.percentage)
     this.AllTheSelectedOptions.push($event);
-    if(this.index == 6){
+    if(this.index == 7){
       //go to final page
       localStorage.setItem('options', JSON.stringify(this.AllTheSelectedOptions));
       this.router.navigateByUrl('/continue');

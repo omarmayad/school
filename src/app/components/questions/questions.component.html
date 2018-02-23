@@ -15,10 +15,10 @@
 
 <div class="jumbotron">
   <div class="page-header" [ngStyle]="{'background-color':currentColor}"> 
-		<h1> Open Positions : <span class="label"><strong>(27)</strong></span></h1>
+		<h1> Get matched to a school<strong> in seconds &#33;</strong></h1>
 </div>
     
-
+<app-seventh-question *ngIf="currentQuestion=='SeventhQuestion'" (messageEvent)="receiveEvent($event)"></app-seventh-question>
 <app-first-question *ngIf="currentQuestion=='FirstQuestion'" (messageEvent)="receiveEvent($event)"></app-first-question>
 <app-second-question *ngIf="currentQuestion=='SecondQuestion'" (messageEvent)="receiveEvent($event)"></app-second-question>
 <app-third-question *ngIf="currentQuestion=='ThirdQuestion'" (messageEvent)="receiveEvent($event)"></app-third-question>
@@ -39,8 +39,8 @@
 			<div class="progress-meter">
 				<div class="meter meter-left" style="width: 25%;"><span class="meter-text">Qualify</span></div>
 				<div class="meter meter-left" style="width: 25%;"><span class="meter-text">Profile</span></div>
-    			<div class="meter meter-right" style="width: 25%;"><span class="meter-text">Finish!</span></div>
-				<div class="meter meter-right" style="width: 25%;"><span class="meter-text">Positions</span></div>
+    			<div class="meter meter-right" style="width: 25%;"><span class="meter-text">Finish &#63;</span></div>
+				<div class="meter meter-right" style="width: 25%;"><span class="meter-text">Matches</span></div>
 			</div>
 		</div>
 	

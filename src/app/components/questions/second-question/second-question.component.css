@@ -1,3 +1,26 @@
-.selected-options{
+.scrollable-menu {
+    height:150px;
+    
+    overflow-y: scroll;
+  }
+  h6{
+      margin: 25px 0 auto;
+      text-align: center;
+      font-size: 18px;
+  }
+  .selected-options{
+    text-align: center;
+    display: flex;
+}
+.OptionBtn{
+    margin: 5px 20px;
+    
+  }
+ .dropdown-menu{
+    left: -4rem !important;
+    min-width: 8rem !important
+ } 
+
+ .btn-group{
     text-align: center;
 }

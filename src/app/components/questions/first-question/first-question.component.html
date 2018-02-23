@@ -1,16 +1,20 @@
 <div class="questions-block " >
 	<div class="page-header">
-  <h3>Are you looking for a full-time or part-time job?</h3>
+  <h3>When would you like to start school?</h3>
 </div>
 <div class="card col-md-12">
   <div class="card-block">
    
 
-    <button type="button" (click)="nextQuestion('FullTime')" class="btn btn-success btn-lg" >Full Time</button>
+    <button type="button" (click)="nextQuestion('Within 1 month')" class="btn btn-success btn-lg" >Within 1 month</button>
 
-    <button type="button" (click)="nextQuestion('PartTime')" class="btn btn-success btn-lg" >Part Time</button>
+    <button type="button" (click)="nextQuestion('1-3 months')" class="btn btn-success btn-lg" >1-3 months</button>
         
-    <button type="button" (click)="nextQuestion('AnyJob')" class="btn btn-warning btn-lg">Any Job</button>
+    <button type="button" (click)="nextQuestion('4-6 months')" class="btn btn-success btn-lg">4-6 months</button>
+
+    <button type="button" (click)="nextQuestion('7-12 months')" class="btn btn-success btn-lg">7-12 months</button>
+
+    <button type="button" (click)="nextQuestion('Later than 1 year')" class="btn btn-success btn-lg">Later than 1 year</button>
   </div>
 </div>
 </div>

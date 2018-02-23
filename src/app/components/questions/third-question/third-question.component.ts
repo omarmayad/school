@@ -7,6 +7,7 @@ import { Output } from '@angular/core';
 })
 export class ThirdQuestionComponent implements OnInit {
   @Output() messageEvent = new EventEmitter<any>();
+  school="--Select one--"
   constructor() { }
 
   ngOnInit() {

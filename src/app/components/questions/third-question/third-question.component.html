@@ -1,15 +1,26 @@
 <div class="questions-block secondqq">
 	<div class="page-header">
-  <h3>You may need a Class A Commercial Drivers License (CDL) for certain job positons. Do you have a Class A CDL&#63;</h3>
+  <h3>What is the highest level of education you have completed&#63;</h3>
 </div>
 <div class="card col-md-12">
-  <div class="card-block">
+  <div class="card-block ">
    
+    <div class="btn-group dropdown  offset-md-3 col-sm-12 col-md-6">
+      <button type="button"  class="btn btn-md btn-secondary " >{{school}}</button>
+<button class="btn btn-success dropdown-toggle" type="button" id="school" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+</button>
 
-  <button type="button" class="btn btn-success btn-lg" (click)="nextQuestion('Yes')">Yes</button>
-
-   <button type="button" class="btn btn-danger btn-lg" (click)="nextQuestion('No')">No</button>
-      
+<div class="dropdown-menu scrollable-menu" aria-labelledby="school" role="menu">
+  <button class="dropdown-item" type="button" (click)="nextQuestion('High School Diploma')" >High School Diploma</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('Some college 0-23 credits')">Some college 0-23 credits</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('Some college 24-34 credits')">Some college 24-34 credits</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('Some college 35-59 credits')">Some college 35-59 credits</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('Some college 60-120 credits')">Some college 60-120 credits</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('Associate\'s Degree')">Associate&#39;s Degree </button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('Bachelor\'s Degree')">Bachelor&#39;s Degree</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('Master\'s Degree')">Master&#39;s Degree</button>
+  <button class="dropdown-item" type="button" (click)="nextQuestion('Not yet completed High School')">Not yet completed High School</button>
+  </div>
   </div>
 </div>
 </div>
